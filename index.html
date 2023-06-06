@@ -17,21 +17,28 @@
     <!-- Шапка -->
     <header class="header">
       <div class="container">
+        <!-- Реклама -->
         <div class="header__sale">
           <div class="header__sale-p">Free Shipping on US Orders Over $60</div>
         </div>
+        <!-- Навигационный бар -->
         <div class="header__navbar">
           <div class="header__navbar-flex">
             <ul class="header__navbar-list-links">
-              <li class="header__navbar-list-link">Shop</li>
-              <li class="header__navbar-list-link">The Edit</li>
-              <li class="header__navbar-list-link">Our Story</li>
-              <li class="header__navbar-list-link">Reviews</li>
+              <li class="header__navbar-list-link"><a href="#products">Shop</a></li>
+              <li class="header__navbar-list-link"><a href="#complect">The Edit</a></li>
+              <li class="header__navbar-list-link"><a href="#our-story">Our Story</a></li>
+              <li class="header__navbar-list-link"><a href="#reviews">Reviews</a></li>
             </ul>
             <img src="img/navbar__img.svg" alt="Logo" class="header__navbar-logo" />
-            <p class="header__navbar-acc">
-              Account  <i class="material-icons header__navbar-icon">local_grocery_store</i> 0
+            <p class="header__navbar-acc acc">
+              Account  <i class="material-icons header__navbar-icon navbar-icon">local_grocery_store</i> 0
             </p>
+            <div class="navbar__burger">
+              <a href="#!" data-target="slide-out" class="sidenav-trigger"
+                ><i class="material-icons">menu</i></a
+              >
+          </div>
           </div>
         </div>
         <div class="header__title-img">
@@ -44,9 +51,32 @@
         </div>
       </div>
     </header>
+    
+    <!-- Всплывающееся меню -->
+    <ul id="slide-out" class="sidenav">
+      <li>
+        <div class="sidenav__title">
+          <img src="img/navbar__img.svg" alt="Logo" class="sidenav__logo"/>
+          <a
+            href="#!"
+            class="sidenav-close"
+            ><i class="material-icons">close</i></a>
+        </div>
+      </li>
+      <li><div class="divider"></div></li>
+      <li><br /></li>
+      <li><a href="#products" class="sidenav_link">Shop</a></li>
+      <li><a href="#complect" class="sidenav_link">The Edit</a></li>
+      <li><a href="#our-story" class="sidenav_link">Our Story</a></li>
+      <li><a href="#reviews" class="sidenav_link">Reviews</a></li>
+      <li><br /></li>
+      <li><p class="header__navbar-acc acc">
+        Account  <i class="material-icons header__navbar-icon navbar-icon">local_grocery_store</i> 0
+      </p></li>
+    </ul>
 
     <!-- Продукты -->
-    <section class="products">
+    <section class="products" id="products">
       <div class="container">
         <h2 class="products__h2">Pick a Pretty Bottle</h2>
         <div class="products__cards">
@@ -70,7 +100,7 @@
     </section>
 
     <!-- Комплекты продуктов -->
-    <section class="complect">
+    <section class="complect" id="complect">
       <div class="complect__card">
         <div class="complect__text">
           <p class="complect__p">Feel the warmth of the desert wherever you are.</p>
@@ -80,7 +110,7 @@
     </section>
 
     <!-- Наша история -->
-    <section class="our-story">
+    <section class="our-story" id="our-story">
       <div class="container">
         <div class="our-story__flex">
           <img src="img/our-story_img.png" alt="OurPhoto" class="our-story__img">
@@ -94,27 +124,27 @@
     </section>
 
     <!-- Отзывы -->
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <div class="container">
         <h2 class="reviews__h2">Follow Us @daehair</h2>
         <div class="reviews__grid">
           <div class="reviews__item">
-            <a href="#"><img src="img/reviews_btn_img.png" alt="ButtonImage" class="reviews__btn"></a>
+            <a href="#"><img src="img/reviews_btn_img.svg" alt="ButtonImage" class="reviews__btn"></a>
           </div>
           <div class="reviews__item">
-            <a href="#"><img src="img/reviews_btn_img.png" alt="ButtonImage" class="reviews__btn"></a>
+            <a href="#"><img src="img/reviews_btn_img.svg" alt="ButtonImage" class="reviews__btn"></a>
           </div>
           <div class="reviews__item">
-            <a href="#"><img src="img/reviews_btn_img.png" alt="ButtonImage" class="reviews__btn"></a>
+            <a href="#"><img src="img/reviews_btn_img.svg" alt="ButtonImage" class="reviews__btn"></a>
           </div>
           <div class="reviews__item">
-            <a href="#"><img src="img/reviews_btn_img.png" alt="ButtonImage" class="reviews__btn"></a>
+            <a href="#"><img src="img/reviews_btn_img.svg" alt="ButtonImage" class="reviews__btn"></a>
           </div>
           <div class="reviews__item">
-            <a href="#"><img src="img/reviews_btn_img.png" alt="ButtonImage" class="reviews__btn"></a>
+            <a href="#"><img src="img/reviews_btn_img.svg" alt="ButtonImage" class="reviews__btn"></a>
           </div>
           <div class="reviews__item">
-            <a href="#"><img src="img/reviews_btn_img.png" alt="ButtonImage" class="reviews__btn"></a>
+            <a href="#"><img src="img/reviews_btn_img.svg" alt="ButtonImage" class="reviews__btn"></a>
           </div>
         </div>
       </div>
@@ -124,22 +154,23 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__grid">
-          <div class="footer__navbar-col1">
+          <div class="footer__navbar-links item-a">
             <p class="footer__navbar-link"><a href="#">Sustainability</a></p>
             <p class="footer__navbar-link"><a href="#">Contact Us</a></p>
             <p class="footer__navbar-link"><a href="#">FAQ</a></p>
             <p class="footer__navbar-link"><a href="#">Careers</a></p>
           </div>
-          <div class="footer__navbar-col2">
+          <div class="footer__navbar-links item-b">
             <p class="footer__navbar-link"><a href="#">Privacy Policy</a></p>
             <p class="footer__navbar-link"><a href="#">CA Privacy Rights</a></p>
             <p class="footer__navbar-link"><a href="#">Terms of Use</a></p>
             <p class="footer__navbar-link"><a href="#">Newsletter</a></p>
           </div>
-          <div class="footer__navbar-address">
-            <p class="footer__navbar-address-p1">ONLY GOOD HAIR DAES AHEAD—AND 10% OFF YOUR FIRST ORDER</p>
-            <p class="footer__navbar-address-p2">Want to shop in person? Swing by our showroom.</p>
-            <div class="footer__navbar-address-p3">M-F, 10am-2pm <address>5051 E Indigo St, Suite 105, Mesa, AZ 85205</address></div>
+          <div class="footer__navbar-address item-c">
+            <p class="footer__navbar-address-p-title">ONLY GOOD HAIR DAES AHEAD—AND 10% OFF YOUR FIRST ORDER</p>
+            <br>
+            <p class="footer__navbar-address-p">Want to shop in person? Swing by our showroom.</p>
+            <div class="footer__navbar-address-p">M-F, 10am-2pm <address style="display: inline;">5051 E Indigo St, Suite 105, Mesa, AZ 85205</address></div>
           </div>
         </div>
         <div class="footer__rights">© 2021 dae. All rights reserved.</div>

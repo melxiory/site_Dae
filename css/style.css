@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
   --color-white: #ffffff;
-  --color-copper: #B45F4D;
-  --color-pantone: #F1D3B9;
-  --color-bg-orange-terra: #F6F4EC;
-  --color-green-tea: #A9AE8D;
-  --color-dupont: #DF9B7A;
-  --color-bg-peach-white:  #F1D3B9;
+  --color-copper: #b45f4d;
+  --color-pantone: #f1d3b9;
+  --color-bg-orange-terra: #f6f4ec;
+  --color-green-tea: #a9ae8d;
+  --color-dupont: #df9b7a;
+  --color-bg-peach-white: #f1d3b9;
   --color-black: #000;
 }
 
@@ -57,7 +57,8 @@ a:hover {
   margin: 0 auto;
 }
 
-
+/* Шапка */
+/* Реклама */
 .header__sale {
   background-color: var(--color-copper);
   padding: 10px 0;
@@ -70,8 +71,10 @@ a:hover {
   color: var(--color-pantone);
 }
 
+/* Навигационный бар */
 .header__navbar {
   background-color: var(--color-bg-orange-terra);
+  padding: 10px 0;
 }
 
 .header__navbar-flex {
@@ -97,17 +100,47 @@ a:hover {
   margin-right: 240px;
 }
 
-.header__navbar-acc {
+.acc {
   font-size: 14px;
   line-height: 22px;
   color: var(--color-copper);
 }
 
-.header__navbar-icon {
+.navbar-icon {
   color: var(--color-black);
   margin-left: 10px;
   vertical-align: middle;
 }
+
+.sidenav-trigger .material-icons{
+  margin-top: 10px;
+  font-size: 35px;
+}
+
+.navbar__burger{
+  display: none;
+}
+
+/* Всплывающееся меню */
+.sidenav{
+  background-color: var(--color-bg-orange-terra);
+}
+
+.sidenav__title {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 10px 20px 30px;
+}
+
+
+.sidenav_link {
+  font-weight: 500;
+  font-size: 22px !important;
+  line-height: 60px !important;
+  color: var(--color-copper) !important;
+}
+
+
 
 .header__title-img {
   min-height: 435px;
@@ -115,6 +148,7 @@ a:hover {
   background-image: url(../img/header_title_img.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -159,8 +193,8 @@ a:hover {
   color: var(--color-bg-orange-terra);
 }
 
-
-.products .container{
+/* Продукты */
+.products .container {
   background-color: var(--color-bg-orange-terra);
   padding-top: 40px;
   padding-bottom: 80px;
@@ -198,6 +232,7 @@ a:hover {
   color: var(--color-copper);
 }
 
+/* Комплекты продуктов */
 .complect {
   padding-top: 25px;
   padding-bottom: 50px;
@@ -209,6 +244,7 @@ a:hover {
   width: 100%;
   height: 414px;
   background-image: url(../img/complect_img.png);
+  background-position: center;
   display: flex;
   align-items: end;
 }
@@ -236,8 +272,8 @@ a:hover {
   color: var(--color-bg-orange-terra);
 }
 
-
-.our-story__flex{
+/* Наша история */
+.our-story__flex {
   background-color: var(--color-bg-peach-white);
   padding: 60px 0;
   display: flex;
@@ -252,7 +288,7 @@ a:hover {
 .our-story__text-content {
   max-width: 518px;
   max-height: 582px;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   padding: 50px;
   margin-left: -25px;
 }
@@ -278,9 +314,193 @@ a:hover {
   color: var(--color-copper);
 }
 
+/* Отзывы */
+.reviews {
+  padding-top: 25px;
+}
+
+.reviews__h2 {
+  font-size: 23px;
+  line-height: 39px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-black);
+  margin-bottom: 45px;
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  margin-bottom: 45px;
+}
+
+.reviews__grid .reviews__item:nth-child(1) {
+  background-image: url(../img/reviews_img_1.png);
+}
+.reviews__grid .reviews__item:nth-child(2) {
+  background-image: url(../img/reviews_img_2.png);
+}
+.reviews__grid .reviews__item:nth-child(3) {
+  background-image: url(../img/reviews_img_3.png);
+}
+.reviews__grid .reviews__item:nth-child(4) {
+  background-image: url(../img/reviews_img_4.png);
+}
+.reviews__grid .reviews__item:nth-child(5) {
+  background-image: url(../img/reviews_img_5.png);
+}
+.reviews__grid .reviews__item:nth-child(6) {
+  background-image: url(../img/reviews_img_6.png);
+}
+
+.reviews__item {
+  width: 230px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 10px;
+}
+
+/* Подвал */
+.footer .container {
+  background-color: var(--color-bg-orange-terra);
+  padding-top: 65px;
+  padding-left: 50px;
+  padding-bottom: 60px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 200px 600px 1fr;
+  margin-bottom: 140px;
+}
+
+.footer__navbar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer__navbar-link {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-copper);
+}
+
+.footer__navbar-address-p-title {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--color-dupont);
+}
+
+.footer__navbar-address-p {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--color-dupont);
+}
+
+.footer__rights {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--color-dupont);
+}
 
 
+@media screen and (max-width: 1420px) {
+  /* Отзывы */
+  .reviews__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
 
+@media screen and (max-width: 1420px) {
+  /* Продукты */
+  .products__cards {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+  }
+}
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 1100px) {
+  /* Наша история */
+  .our-story__flex {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .our-story__img {
+    margin-right: 0;
+  }
+  .our-story__text-content {
+    margin-left: 0;
+    order: -1;
+  }
+
+  /* Подвал */
+  .footer__grid {
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  /* Навигационный бар */
+  .navbar__burger{
+    display: block;
+  }
+  .header__navbar-list-links {
+    display: none;
+  }
+  .header__navbar-logo {
+    margin-right: 0;
+  }
+  .acc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* Отзывы */
+  .reviews__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Комплекты */
+  .complect__text {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Подвал */
+  .item-a{grid-area: a;}
+  .item-b{grid-area: b;}
+  .item-c{grid-area: c;}
+  .footer__grid {
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'a b' 'c c';
+    justify-items: center;
+    text-align: center;
+    gap: 60px;
+  }
+  .footer .container {
+    padding-left: 0;
+  }
+  .footer__rights {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 520px) {
+    /* Отзывы */
+    .reviews__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .our-story__text-content {
+      max-width: 100%;
+      max-height: 100%;
+    }
 }
